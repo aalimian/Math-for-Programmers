@@ -29,10 +29,11 @@ faces = [
 
 pygame.init()
 display = (400,400) #1
-window = pygame.display.set_mode(display, DOUBLEBUF|OPENGL) #2
+window = pygame.display.set_mode(display, DOUBLEBUF|OPENGL|RESIZABLE) #2
 
 gluPerspective(45, 1, 0.1, 50.0) #1
 glTranslatef(0.0,0.0, -5) #2
+glRotatef(45, 1, 1, 1)
 glEnable(GL_CULL_FACE) #3
 glEnable(GL_DEPTH_TEST) #4
 glCullFace(GL_BACK) #5

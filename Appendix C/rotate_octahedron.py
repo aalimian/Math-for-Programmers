@@ -66,6 +66,7 @@ while True:
     degrees_per_second = 360./5.
     degrees_per_millisecond = degrees_per_second / 1000.
     milliseconds = clock.tick()
+    print(milliseconds)
     degrees = degrees_per_millisecond * milliseconds
     glRotatef(degrees, 1,1,1)
 
@@ -78,4 +79,4 @@ while True:
     glEnd()
     pygame.display.flip()
 
-    print(clock.get_fps())
+    # print(clock.get_fps())
